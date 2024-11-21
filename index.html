@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
+			<title>TaskFlow</title>
+
+
+			<style>
+				body {
+					padding: 0.25rem;
+				}
+				#maindiv {
+					display: grid;
+					grid-template-columns: 33% 33% 33%;
+				}
+				article {
+					margin: 1rem;
+				}
+				progress {
+					width: 50%;
+				}
+				#endBtn{
+					display: none;
+
+				}
+				#clear {
+					float: right;
+				}
+				button {
+					padding-bottom:0.25rem;
+					padding-top: 0.25rem;
+				}
+
+</style>
+		</head>
+
+		<body>
+			<main>
+			<header><h1>Taskflow</h1></header>
+			<p>The task managing tool</p>
+
+			<hr>
+			
+			<section>
+			<div>
+
+				<p id="msg"></p>
+				<h4>Write a task</h4>
+				<input type="text" placeholder="take out trash">
+			<button id="Btn">add task</button>
+			<button id="save">save tasks</button>
+			<button id="clear" class="secondary"> clear storage</button>
+					<button id="startBtn" data-tooltip="Track task progress in a focused session.">start session</button>
+					<button id="endBtn" class="secondary">end session</button>
+			</div>
+			
+			<div role="group" style="width: 50%;">
+				<p id="finished-msg">finished tasks: 0</p>
+				<p id="discarded-msg">discarded tasks: 0</p>
+			</div>
+			<progress  value="1" max="100"></progress>
+		</section>
+
+		<div id="maindiv">
+		</div>
+
+	</main>
+		</body>
+
+		<script type="text/javascript" src="script.js"></script>
+	</html>
